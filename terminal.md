@@ -2,3 +2,150 @@ primer commit para la clase termianr
 
 invocar programas que no sabemos qeu tenemos
 	metodos para ubscar dentor del archivo
+banderas
+	
+Terminal
+	La terminal nos abre un mundo de posibilidades increíbles. Desde tener una navegación avanzada entre todos nuestros nodos y archivos, hasta contar con programas previamente instalados e increíbles que solo pueden ser ejecutados desde este entorno y ni siquiera sabemos que existen.
+
+Comandos ( y algunas bandreas)
+	ls: lista lso contenidos de un direcotrio
+		ls -l: lista los archivos con datos de cada nodo, ordenados alfabeticamente
+		ls-lS: lista lso contenidos ordenador por tamño
+		ls -lh: lista los contenido mostrando los datos legibles facilmente(tamaño)
+		ls -r: lsita los archivos ordenados de forma inversa(srive con las bandersaS y t)
+	rm [file] : elimina un archivo
+	rm -rf [DIRECTORY]: elimina un direcotiro recursivamente sin preguntar
+	mv [file] [directory] : mueve file a directory
+	mv [file] [name] reonombra file a name
+	cd [directory] : lleva el prompt a directory
+	touch [file]: si File existe ,modifica la hora de ultiam modificacon al momento de la ejecucion del comando ,si
+
+lista comando repositorio beco
+Lista de comandos usados en #PlatziTerm
+
+Work in progress
+
+Conceptos
+
+PROMPT: Donde se encuentra el cursor, un lugar en el árbol de nodos que es la representación del disco duro en el sistema operativo
+Comandos (y algunas banderas)
+
+ls: lista los contenidos de un directorio
+ls -l: lista los archivos con datos de cada nodo, ordenados alfabéticamente
+ls -lS: lista los contenidos ordenados por tamaño
+ls -lh: lista los contenidos mostrando los datos legibles fácilmente (tamaño)
+ls -r: lista los archivos ordenados de forma inversa (sirve con las banderas S y t)
+ls -a: lista los contenidos de un directorio incluyendo los archivos ocultos
+tree lista recursivamente la estructura de árbol de un directorio incluyendo tanto archivos como directorios (NOTA: No viene pre-instalado así que hay que instalarlo primero con su administrador de paquetes preferido: para RHEL/CentOS/Fedora yum install tree para Debian/Mint/Ubuntu apt-get install tree, para OS X brew install tree)
+tree -L 1: muestra recursivamente la estructura de árbol de un directorio pero sólo hasta el primer subnivel de directorios
+tree -a: muestra recursivamente la estructura de árbol de un directorio incluyendo tanto archivos como directorio ocultos
+tree -d: muestra recursivamente la estructura de árbol de un directorio tomando en cuenta sólo los directorios
+tree -dL 1: muestra recursivamente la estructura de árbol de un directorio tomando en cuenta sólo los directorios y hasta el primer subnivel
+rm [FILE]: elimina un archivo
+rm -rf [DIRECTORY]: elimina un directorio recursivamente sin preguntar
+mv [FILE] [DIRECTORY]: mueve FILE a DIRECTORY
+mv [FILE] [NAME]: renombra FILE a NAME
+cd [DIRECTORY]: lleva el PROMPT a DIRECTORY
+touch [FILE]: si FILE existe, modifica la hora de última modificación al momento de la ejecución del comando, si FILE no existe, lo crea
+ln -s [DIRECTORY] [NAME]: crea un link simbólico llamado NAME hacia DIRECTORY, NAME se comporatará como DIRECTORY
+tail [FILE]: muestra las últimas 10 lineas de un archivo de texto
+tail -f [FILE]: tail forever, en principio muestra las últimas 10 líneas de FILE, pero mantiene abierto el archivo e imprime los cambios que se vayan escribiendo (secuencialmente) en éste, muy útil para logs.
+more [FILE]: muestra el contenido de un archivo de texto de forma páginada
+cat [FILE]: imprime todo el contenido de un archivo en pantalla
+clear:limpia la terminal
+pwd: imprime o muestra la ruta actual donde nos encontramos ubicados
+man [COMANDO]: muestra la documentacion de todos los comandos
+mkdir [DIRECTORY]: crea un directorio en la ubicación actual
+mkdir -p [RUTA]: crea un árbol de directorios completo que no existe
+cp [archivo/directorio origen] [archivo/directorio destino]: copia un archivo o directorio desde un origen a un destino
+cp -r [directorio origen] [directorio destino]: copia un directorio y todos sus directorios hijos de forma recursiva
+open [-a APP] [ FILE | DIRECTORY ]: abre el (archivo o directorio) con la aplicación por defecto en el sistema operativo, si se manda la bandera -a usará la APP para abrirlo
+Operadores para STDIN, STDOUT/STDERR
+
+      entrada      ->    ejecución     ->        salida
+                                 +-------> STDOUT (1)
+                                 |
+                  +--------+     |
+  STDIN (0) ----> | script | ----+
+                  +--------+     |
+                      T          |
+                      |          +-------> STDERR (2)
+                      |
+          STDIN (0)---+
+operador | (pipe):
+
+command_1 | command_2 Manda el STDOUT de command_1 al STDIN de command_2
+
+operador >
+
+command_1 > FILE Manda el STDOUT de command_1 al inicio de FILE. Si FILE no existe lo crea, si existe lo sobreescribe.
+
+operador >>
+
+command_1 >> FILE Manda el STDOUT de command_1 al inicio de FILE. Si FILE no existe lo crea, si existe lo concatena al fina (tras un newline).
+
+operador <
+
+command_1 < FILE Manda al STDIN de command_1 el contenido de FILE.
+
+redirección de salidas
+
+command > FILE - manda el STDOUT a FILE
+command 1> FILE 2>FILE_ERROR - manda el STDOUT a FILE y el STDERR a FILE_ERROR
+command > FILE 2>&1 - manda, tanto el STDOUT como el STDERR a FILE
+command >> FILE 2>&1 - manda a concatenar las salidas de STDOUT y STDERR a FILE
+Combinación de teclas como comandos
+
+[ctrl]-C - este comando termina el proceso que se esté ejecutando en la terminal, haya o no acabado de ejecutarse.
+[ctrl]-D - el sistema lo interpreta como EOF (End Of File) y cierra el stream de entrada (STDIN) para un archivo en donde se esté escribiendo desde la terminal.
+Cómo salir de VI/VIM
+
+Ejecutar la siguiente combinación de teclas para
+
+salir guardando los cambios: [ESC] : w q ![ENTER]
+salir sin guardar cambios: [ESC] : q ! [ENTER]
+
+clear
+	para limpiar la pantalla
+pwd
+	donde estoy
+cd ~ 
+	para volver al home
+cd /
+	raiz
+cd 
+	para ir al home
+ls
+	archivos y direcotrios que hay dentro
+ls -l
+	dame listado pero en forma de lista
+	Primer letra
+		q tipo de nodo es
+			- archivo
+			l link
+			d directroio
+cd
+	change direcotry (mueve el apuntador de donde estoy a otro direcotrio)
+ls -lt
+	va ordenar todo con respecto a la fechas mascercanaa la mas lejana
+tecla arriba
+	accedemos a hisotiral de ejecucion de ocmandos
+ls-ltr
+	va ordenar tood ocn repsecto a la fechas mas lejanaa cercana
+numeros
+	son el tamaño del archivo
+ls -lh
+	h: human readlible
+	va mostar n consolo algo legibre pra el humano
+ls -lhS
+	direcotrio no tiene tamñao
+	mayor a menor los archivos segun el peso de cada uno
+ls -lhSr
+	lo mismo q el anterior pero en reversa
+du -h -d 1
+	du:desc usage
+	-h:
+	-d: imprime cuanto pesa todo
+	1
+cd .
+	nos sirve para llevarnos al directorio donde nos encontramos

@@ -149,3 +149,37 @@ du -h -d 1
 	1
 cd .
 	nos sirve para llevarnos al directorio donde nos encontramos
+mkdir fotos
+	creacion de direcotiro fotos
+mv [archivo] [directorio]
+	mv hol.md fotos/
+		moviendo archivo hol.md a fotos
+../
+	regresa un direcotrio
+./
+	directorio actual
+mv ~/donwlaodas/*.jpg
+	* : que es archivo se llame como sea y que termien en jpg
+cp ../foto.jpg .
+	copiar archivos
+mv foto.jpg imagen.jpg
+	renombrar archivos
+touch 
+	abre archivo y lo cierra (par amodificar fecha d emodificacion)
+touch [archvo]
+ln -s [flickr_photos.csv] [fotos.csc]
+	creacin de un link fotos.csv para vlickr_photos..csv
+	espacio en el diso duro que apunta a otro lugar
+rm 
+	remove (usar ocn exprema precaucion)
+rm -r
+	borra todo
+rm [archivo]
+	borrar un archivo
+	no hay bandeja de basura
+rm csvs/*
+	borra todo lo que haya dentro de csvs
+rm -rf csvs/
+	borrando dinrectorio csvs
+rm fotos.csv
+	borranod link

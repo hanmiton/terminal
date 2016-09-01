@@ -183,3 +183,149 @@ rm -rf csvs/
 	borrando dinrectorio csvs
 rm fotos.csv
 	borranod link
+bc
+	calculadora
+	quit
+		pra salir
+open -a textedit [archivo]
+	-a q app se desea usar
+	open para abrir un archivo
+bc [calculos]
+	para realizar los calculos de un archivo solo muestra los resultados
+bc -q
+	entra directamente a la operacino sin mostarr la licencia
+md5
+	entrega la huella digital d eun archivo
+	es mas rapido q sha
+md5 [archivo]
+	huella digital de dicho archivo
+more / less
+	muestra lo que estan en el archivo en consola
+	si el arichivo es muy grande lo va paginar
+	espacio para ir a la siguient epagina
+	b em regresa
+	enter avanza de uno en uno
+tail  -20 [documetno]
+	nos va dar las ultimas 20 linas
+tail -f [documento]
+	deja esuchcando este archivo e impre las ultimas lineas
+	se usa para atener el archivo de log abierto
+cat 
+	es concatenacion
+cat [documento]
+	imprimer todo el documento
+wc [documento]
+	para ver el nuermo de lineas palabras
+wc [documento.csv]
+	nos sirve par aver las ultimas plabras
+wc -l [documento]
+	muestra el numero de lineas
+wc -c [documento]
+	numeor de caracteres de un archivo
+
+	wc siginifa word count
+man
+	manual
+	man bc 
+		ayyda para el comando bc
+	man wc
+		aydua sobre wordcount y nos da las banderas
+	man man
+		manual de man
+echo $PATH
+	echo: simplemente imprime
+	enumra los directorios donde el sistema puede leer los ejecutables
+which cat
+	ver donde se encuentra
+Como ejecutra un comando
+	comando
+	comando -f 1 --banderas=1 
+		sin espacion signific q e es bandera prendida
+		--para mandar un valor a una bandera
+	comando prametro.txt
+	comando parametro_1.txt parametro_2.txt
+	comando -b -h 1 parametro
+top
+	me da un estaus de como se encuentra mi sistemas
+	y qeu sistemas se encuentra corriendo
+	snapshot de que esta ocurriendo en mi sistema
+procesos
+	pid: procesos id siver para identificar un determiando proceso
+	apalstando o
+		para ordenar por lo que lo deseamos
+php ../scripts/1-process.php
+	terminar la ejecucion de un proceso 
+		ctrl+c
+
+php ../scripts/1-process.php &
+	& me regresa el control de la terminal
+kill -9 12547
+	matando el proceso con id 12547
+ps -wA
+	process status
+	enlista los procesos que se sesta ejecutnado en este momento
+?
+	EL PROCESS STATUS DEL UNICO proceso que se ejecuto
+	exit status
+		1 es qeu algo salio mal
+		0 todo esta bien
+Standar Input 
+Standar Output
+Standar Error
+	programa
+		recibe datos
+		interprtarlos procesarlos
+		y sacar una respuesta
+Standar Output
+	STDOUT
+	Es lo que imprime un programa
+Standar Error
+	STDERROR
+sTANDAR OUTPUT Y ESTANDAR ERORRO
+	salen en la misma pantalla
+> salida del standar la imprime a un archivo si no existe el archivo lo crea
+php ../scripts/2-stdou.php >results
+	solo imprime loq ue no es error como resualtado
+>>
+	......ver para q sirve
+one liner
+	touch operacones.bc
+|
+	sirve para con catenar comadnos
+	Linea especial de algo esta fal
+	landao
+
+cat operacines.bc | bc -q
+	operacins es el input para bc -q
+concatenando 3 comandos
+cat operaciones.bc | bc-q | wc -l > res_bc
+
+more ../keynotes/schemas/io.txt
+	para pder ver el eschuma de stardarinput y stander output
+Entradras 
+	pupeden ser de diferentes fuentes
+Salidas
+	STDOUT (1)
+		donde todo sale por defecto
+	STDERR (2)
+		lo qeu da error dentro del sistema sale por aqui
+
+<
+	lee un archivo y lo manda como stardar input
+
+bc-q < operacines .bc
+	diferencia entre | y <
+		qeu tiene q esperar la ejecucion de otro programa
+bc -1 < operaciones.bc > resultado
+	input operaciones.bc
+	comnado bc -1
+	la manda a resultado output
+
+2>&1
+	concatenar stremas de salida y de error
+2> errores
+	manda de errores a errores
+
+tail -f resultado
+	lo esta viendo comandos en vivo 
+	-f forever

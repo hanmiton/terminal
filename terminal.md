@@ -329,3 +329,142 @@ bc -1 < operaciones.bc > resultado
 tail -f resultado
 	lo esta viendo comandos en vivo 
 	-f forever
+
+grep 
+	de lo que llega busca un cadena de caracters
+	grep beco
+grep ,beco$
+	$endofline donde termina la linea
+grep -r . -e beco$
+	-r recursivamente
+	-e expresion
+	$	end of line
+grep -r . -e beco$ -n -v
+	-n linea en la que se esta encontrando
+	-v icanbecontacted 
+		es para q no escoja este itpo de palabras
+^: start of line
+
+find ~/src -name '*.csv' -type -f -exec md5 {} \;
+
+find .  -name 'flickr_*' -type f -exec mv {} {}.scv \;
+
+	find: buscar
+	-name: nobmre
+	-type: f que se archivo
+	-exce ejecute comando
+	mv: mover
+	{} archivo
+	\ terminar ejecuacin de comando
+split -l 3000 ../flickr_pohotos.csv ./fl_3000_
+	split pra dividir el archivo en distintos
+
+curl
+	emula un request
+	genera un reques a un url
+httpbin.org
+	te manda los datos del reqeutsp
+curl -o google_preuba.html http://ww.gogoel.com.mx
+	snapshot de status
+	como se encuentra bajando las cosas
+	-o output donde se queire guardad
+curl -O https://raw.githubusercontetn.com/beco/cli/master/files/close_call.gif 
+	-O es para preservar el nombre original del docuemtno o archivo
+
+	/dev/null
+		no muestara lo qeu se demora la peticnon
+get
+curl http://httpbin.org/get?variable=2&uno=1&dos=2
+	realizando un perticno get con curl
+	&sirve para añadir mas parametros auna peticion get
+curl "http://httpbin.org/get?variable=2&uno=1"
+	"": como llas para que no exitas problemas con & ya q es reservado pra la ocnsola
+curl --data "varibale1=1&variable2=2" http://httpgin.rog/post
+	haciendo post ocn curl
+	-A "agente_beco": para cambiar el user-agent
+		sirver para hcer paginas responsive
+
+User-Agent : que se esta utilizacno pra hacer la peticon
+
+curl --data "message_nada y tu " https................
+
+curl -d @request_data.txt https://guarder-dusck-oouo.herkouapa.com/mesasge
+	-d: para especificar un mensaje con las variables
+	@ especificando el archivo
+vi
+	editro de texto de consola
+
+crontab
+	agendar comandos que se ejecuten cuando queramos
+	cada hroa
+	min
+	etc...
+ctrontab -l
+	tienen 5 columnas
+	* todas las opciones
+	1ra minutos
+	2da horas
+	3ra dia del mes (1-31)
+	4ta mes [1-12]
+	5to dia de la seman[´0domingo- 6 sabado]
+	script.sh que se piensa ejecutar
+todos los valores
+crontab -e
+	-e para poder editar
+
+	* todos los valores
+	1-10 de 1 a 10
+	*/5 cada 5
+	1,3,5,9 que se ejecute algo puntualmente
+
+*/2	12-15	2,5,15,16,19,21	*	1-5 date > $HOME/hora.txt
+	*/cada dos minutos
+	entre 12 y 15 horas
+	dias 2.......21
+	todos los meses del año
+	que sean entre lunes y vienres
+	comaondo date
+chmod para pmodificar los permisos
+
+Estudiar
+
+El comando cat>file
+	imprimir en pantalla
+Para mandar el STDOUOT de commandX al STDIN de commandY, usario
+	commandX>commandY
+Si quiero busar todos los direcotrios que se llamen src, aparti de home, usario
+	find ~ /src........
+La variable del sistema $? guarda
+	Stdout del ultimo comando
+
+
+
+
+
+
+
+Notas para live
+	
+	isr ganancias netas 
+		gastos deducible o perdidas
+		gana mas paga mas
+	consolidacion fiscal
+		contra perdidas de otras empresas con perdidas propias
+tacticas del dobel irlandes
+inlanda como registro de compañia con eso bajan ganancias fuera de maerica
+
+cada año desaparecen dinero en paraisos fiscales
+10km fracesas hersey
+sistema de leyes eludiendo los impuesto
+hombre de paja
+	siempre necesitasba hombres pra establecer ocmpanias en el el extranjero
+	cualqueiera peude ser direcror o testaferro
+	hersey
+	no producen dinero si no atraen dinero
+	captar capitaels de paises a paraisos fiscalesp para eleduir los impuestos
+	jersey isla parasio fiscal
+Bozetos
+
+
+
+cat

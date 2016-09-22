@@ -430,14 +430,20 @@ Estudiar
 
 El comando cat>file
 	imprimir en pantalla
+	manda final archivo
+	escribe al inicio
 Para mandar el STDOUOT de commandX al STDIN de commandY, usario
 	commandX>commandY
+	commandX>>conmamnY
+	|
 Si quiero busar todos los direcotrios que se llamen src, aparti de home, usario
-	find ~ /src........
+	find ~ name src
+	find ~ name src -type=d
+	find ~ -name src -dir
 La variable del sistema $? guarda
 	Stdout del ultimo comando
-
-
+	el nombre del ultimo comando
+	
 
 
 
@@ -468,3 +474,15 @@ Bozetos
 
 
 cat
+12
+21/09/2016
+	shell sh
+		execute
+			chmod +x archivo.sh
+			./archivo.sh
+
+			#!/bin/bash
+				who execute dont care about the extension
+			#!/bin/php
+				execute sciprt with php
+				
